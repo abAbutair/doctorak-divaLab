@@ -1,0 +1,873 @@
+/*
+*--------------------------index--------------------------
+ */
+
+//--------index-opening--
+.index-opening {
+  background-position: center;
+  background-repeat: no-repeat;
+  .float-find {
+    padding: 70px 0;
+    padding-#{$left}: 16px !important;
+    .find-adoctor {
+      width: 500px;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.8);
+      form {
+        h1 {
+          font-family: $titleFont;
+        }
+      }
+    }
+  }
+}
+
+//--------how-it-works--
+.how-it-works {
+  text-align: center;
+  .hiw-heading {
+    margin-bottom: 40px;
+  }
+  .hiw-body {
+    .hiw-single {
+      a {
+        display: block;
+      }
+      .hiw-single-img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+      }
+      .hiw-single-bio {
+
+        a {
+          font-size: 20px;
+        }
+        p {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+//--------doctors--
+.doctors {
+  text-align: center;
+  .doctors-carousel {
+    margin-top: 80px;
+    .owl-carousel .owl-dots {
+      margin-top: 40px;
+    }
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+      width: 70px;
+      height: 7px;
+      background: #fff;
+      margin-#{$right}: 10px;
+      &:last-child {
+        margin-#{$right}: 0;
+      }
+    }
+    .owl-carousel button.owl-dot.active {
+      width: 70px;
+      height: 14px;
+      background: $border-color;
+    }
+  }
+}
+
+//--------client-faq--
+.client-faq {
+  .client-say {
+    background: #f9f9f9;
+    padding: 100px 70px;
+    p {
+      margin: 0;
+      position: relative;
+      &:before {
+        content: url('../images/top-qouats.png');
+        position: absolute;
+        top: -60px;
+        #{$left}: -20px;
+      }
+      &:after {
+        content: url('../images/top-qouats.png');
+        position: absolute;
+        bottom: -60px;
+        #{$right}: -20px;
+        transform: rotate(180deg);
+        z-index: 1;
+      }
+    }
+  }
+  .the-client {
+    text-align: $right;
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 0;
+    div {
+      text-align: center;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 75px;
+        #{$left}: calc(50% - 30px);
+        border-top: 30px solid #f9f9f9;
+        border-#{$right}: 30px solid #f9f9f9;
+        border-bottom: 30px solid transparent;
+        border-#{$left}: 30px solid transparent;
+        transform: translateX(-50%);
+      }
+    }
+    h3 {
+      text-transform: uppercase;
+      color: $main-color;
+      font-size: $title-fontSize;
+      font-family: $titleFont;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+.faq {
+  .accordion {
+    .card {
+      border-radius: 0;
+      border: 1px solid $border-color;
+      background: $grey-light;
+      margin-bottom: 20px;
+      .card-header {
+        border: none;
+        background: transparent;
+        padding: 0;
+        .btn {
+          width: 100%;
+          text-align: $left;
+          background: transparent;
+          color: $scd-color;
+          position: relative;
+          &:after {
+            content: '\f068';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 700;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            #{$right}: 0.75rem;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            background: $scd-color;
+            color: #fff;
+          }
+          &.collapsed {
+            color: $font-color;
+            &:after {
+              content: '\f067';
+              background: $dark-grey;
+            }
+          }
+        }
+      }
+      .card-body {
+        padding: 0.75rem;
+      }
+    }
+  }
+  .accordion .card:not(:first-of-type):not(:last-of-type) {
+    border-bottom: 1px solid $border-color;
+  }
+  .btn-link.focus, .btn-link:focus {
+    text-decoration: none;
+  }
+  .btn-link:hover {
+    text-decoration: none;
+  }
+}
+
+//--------appointment--
+.appointment {
+  background-color: $grey-light;
+  background-image: url('../images/reservation.jpg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 50%;
+  position: relative;
+  &:before {
+    content: '';
+    background-color: #105484;
+    opacity: 0.85;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    #{$left}: 0;
+    top: 0;
+  }
+  .book-appointment {
+    form {
+      width: 90%;
+    }
+    .medical-margin {
+      margin-#{$left}: 30px;
+    }
+    .medical-service {
+      display: flex;
+      margin-bottom: 40px;
+      .medical-img {
+        width: 60px;
+        height: 60px;
+        align-items: center;
+        display: flex;
+      }
+      .medical-info {
+        width: calc(100% - 60px);
+        .medical-info-head {
+          font-size: 16px;
+          text-transform: capitalize;
+          font-family: $headingFont;
+          color: #333;
+        }
+        p {
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  .blue-heading {
+    h1 {
+      color: $main-color;
+      margin-bottom: 15px;
+    }
+    p {
+      color: $text-grey;
+    }
+  }
+}
+
+//--------newsletter--
+.newsletter {
+  margin-top: 60px;
+  position: relative;
+  &:before {
+    content: '';
+    background-image: url(../images/message.png);
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto;
+  }
+  .newsletter-content {
+    width: 565px;
+    margin: 0 auto;
+    text-align: center;
+    h1 {
+      margin-bottom: 15px;
+    }
+    p {
+      color: $text-grey;
+    }
+    form {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+/*
+*--------------------------INTERNALS--------------------------
+ */
+
+//-------ABOUT-US-------------
+.who-we-are {
+  .article {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .embed-media {
+    .embed-video {
+      height: 380px;
+    }
+  }
+}
+
+.our-mission {
+  background-image: url('../images/aboutus.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  .section-heading {
+    color: $text-grey;
+  }
+  article, p, ul li {
+    color: #fff;
+  }
+  &:before {
+    content: ' ';
+    background: radial-gradient(rgba(34, 112, 184, 0.8), rgba(14, 81, 126, 0.99));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//-------appointment-page------------
+.appointment-page {
+  .appointment-inner {
+    .filtration {
+      width: 320px;
+      float: $left;
+      background: #f9f9f9;
+      margin-#{$right}: 30px;
+      padding: 30px 20px 50px;
+      .title {
+        color: $font-color;
+        font-family: $headingFont;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      .filtration-inner {
+        .filtration-block {
+          margin-bottom: 30px;
+          .btns-submission {
+            display: flex;
+            justify-content: space-between;
+            .btn {
+              min-width: calc(50% - 10px);
+              background: $main-color;
+            }
+          }
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .doctors-grid {
+      width: calc(100% - 350px);
+      float: $right;
+      .a-doctor {
+        background: $grey-light;
+        border: 1px solid $grey-light;
+        margin: 0;
+        margin-bottom: 30px;
+        .btn {
+          display: block;
+          margin: 0 auto 40px;
+        }
+      }
+    }
+  }
+}
+
+//-------faq-page------------
+.faq-page {
+  .faq-content {
+    .add-question {
+      background: $grey-light;
+      padding: 40px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+//-------contact-us-page------------
+.contact-us {
+  .contact-block {
+    margin-bottom: 60px;
+    &:last-child {
+      margin: 0;
+    }
+    .contact-info {
+      .single-contact {
+        margin-bottom: 20px;
+        i {
+          color: $main-color;
+        }
+      }
+    }
+    .contact-map {
+      height: 600px;
+    }
+    .contact-opt {
+      display: block;
+      text-align: center;
+      background: $grey-light;
+      padding: 40px;
+      height: 210px;
+      .contact-opt-img {
+        margin-bottom: 20px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p {
+        color: $main-color;
+        font-size: $title-fontSize;
+        font-family: $titleFont;
+        margin: 0;
+        text-transform: capitalize;
+      }
+      &:hover{
+        background: darken($grey-light, 10%);
+        @include transition(0.5s);
+      }
+    }
+  }
+}
+
+//-------registration-page------------
+.registration {
+  form {
+    .form-check {
+      label {
+        color: $text-grey;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.login {
+  .login-wrap {
+    .login-form {
+      display: flex;
+      .btn {
+        width: initial;
+      }
+    }
+    .lefty, .righty {
+      width: calc(50% - 50px);
+    }
+    .or {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      p {
+        margin-top: 47px;
+      }
+    }
+    .righty {
+      .social-login {
+        display: block;
+        a {
+          color: #fff;
+          justify-content: center;
+          height: 47px;
+          margin-bottom: 20px;
+          i {
+            font-size: 18px;
+          }
+        }
+        .facebook {
+          background: #29487d;
+        }
+        .gmail {
+          background: #d93025;
+        }
+      }
+    }
+  }
+}
+
+//--------history-page------------
+.table {
+  thead th, tbody td {
+    text-align: center;
+    border-bottom: 0;
+    border-top: 0;
+    text-transform: capitalize;
+    border-#{$right}: 1px solid #fff;
+    border-bottom: 0;
+    &:last-child {
+      border-#{$right}: none;
+    }
+  }
+  thead {
+    background: #bababa;
+  }
+  tbody {
+    .to-account {
+      color: $main-color;
+    }
+    .accept-btn {
+      color: #66CD00;
+    }
+    .delete-btn {
+      color: $scd-color;
+    }
+  }
+  .motion-under {
+    margin: 0;
+  }
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background: #f9f9f9;
+}
+
+//--------profile-payment-pages------------
+.profile-payment {
+  .merge-block {
+    background: #f9f9f9;
+    padding: 50px 20px;
+    margin-bottom: 50px;
+    &:last-child {
+      margin: 0;
+    }
+    .booking {
+      .doc-demands {
+        display: flex;
+        .doc-img {
+          width: 150px;
+          height: 110px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          border: 1px solid #999;
+          margin-#{$right}: 30px;
+          img {
+            width: 100%;
+          }
+        }
+        .doc-info {
+          .section-heading {
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+          p {
+            margin-bottom: 10px;
+          }
+          h4 {
+            font-size: 16px;
+            font-family: $titleFont;
+          }
+          h5 {
+            font-size: 16px;
+            text-transform: capitalize;
+            span {
+              color: #333;
+              font-family: $bodyFont;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .pay-method {
+      .custom-radio {
+        margin-bottom: 30px;
+        .for-big-pic {
+          width: 65px;
+          height: 40px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .btn {
+        margin-top: 30px;
+      }
+      .method-info-02 {
+
+      }
+    }
+  }
+  .method-info {
+    opacity: 0.5;
+  }
+}
+
+//--general--
+.payment-price {
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  span {
+    color: #333;
+    font-family: $bodyFont;
+    font-size: 16px;
+  }
+  &:last-child {
+    padding-top: 20px;
+    margin: 0;
+  }
+}
+
+//--------doctor-pages------------
+.doctor-profile {
+  &:nth-child(odd) {
+    background: $grey-light;
+  }
+  .profile-form {
+    display: flex;
+  }
+  .upload-pic {
+    margin-#{$right}: 30px;
+  }
+
+  .edit-profile{
+    .tags-wrapper{
+      .tags{
+        position: relative;
+        .tips{
+          width: calc(100% - 33.333333% - 15px);
+          margin-#{$left}: calc(33.333333% + 15px);
+          position: absolute;
+          font-size: 14px;
+          color: $text-grey;
+        }
+      }
+    }
+  }
+  .section-heading {
+    font-size: 20px;
+  }
+  .edit-btns {
+    .btn {
+      margin-#{$right}: 30px;
+    }
+  }
+  .reviews {
+    .single-review {
+      display: flex;
+      margin-bottom: 20px;
+      .account-pic {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin-#{$right}: 15px;
+        img {
+          width: 100%;
+        }
+      }
+      .review-bio {
+        width: calc(100% - 100px - 15px);
+        h3 {
+          font-size: 16px;
+          font-family: $headingFont;
+          text-transform: capitalize;
+        }
+        p, article {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .available-time {
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+//--------doctor-details-pages------------
+.doctor-profile {
+  .doc-booking {
+    display: flex;
+    .doc-rating {
+      margin-#{$right}: 30px;
+      text-align: center;
+      .doc-img {
+        display: flex;
+        width: 260px;
+        height: 200px;
+        overflow: hidden;
+        align-items: center;
+        cursor: pointer;
+        border: 1px solid #bababa;
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+        }
+      }
+      .view-rating{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        .star-rating{
+          .fa-star{
+            font-size: 24px;
+          }
+        }
+        .rate-value{
+          margin-#{$left}: 10px;
+          font-family: $headingFont;
+        }
+      }
+    }
+    .doc-info {
+      .doc-info-head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        h3 {
+          margin-bottom: 15px;
+        }
+        h4 {
+          font-size: 16px;
+          font-family: $titleFont;
+        }
+        .specialty-out {
+          p {
+            color: $main-color;
+            font-size: 16px;
+            font-family: $headingFont;
+            span {
+              color: #333;
+            }
+          }
+        }
+      }
+      .about-me-heading {
+        color: $main-color;
+        font-size: 16px;
+        font-family: $headingFont;
+      }
+      .about-doc {
+        p {
+          margin-bottom: 5px;
+        }
+        .about-me-block {
+          margin-bottom: 20px;
+          &:last-child {
+            margin: 0;
+          }
+          ul {
+            column-count: 2;
+            margin: 0;
+            li {
+              list-style: none;
+              margin-bottom: 10px;
+              p {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .add-review {
+    .add-rating{
+      .star-rating {
+        margin-bottom: 30px;
+        .fa-star {
+          font-size: 24px;
+          color: $scd-color;
+        }
+      }
+    }
+  }
+  .available-cal{
+    .reservation-time{
+      .section-heading{
+        font-size: 20px;
+      }
+      .time-wrapper{
+        .times-price{
+          background: #333;
+          color: #fff;
+          display: flex;
+          justify-content: space-around;
+          width: 200px;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          padding: 15px;
+          div{
+            text-align: center;
+            p{
+              font-size: 14px;
+              margin-bottom: 5px;
+            }
+            span{
+              font-size: 16px;
+              font-family: $headingFont;
+            }
+          }
+        }
+        .the-day{
+          font-size: 20px;
+          font-family: $headingFont;
+          text-transform: capitalize;
+          margin-bottom: 20px;
+        }
+        .times{
+          overflow: hidden;
+          .overflow-h{
+            width: calc(100% + 1.5rem);
+            .scroll-hide{
+              max-height: calc((47px + 20px) * 4);
+              overflow-y: scroll;
+            }
+          }
+          .times-block{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            p{
+              margin: 0;
+            }
+          }
+        }
+        .scroll-more{
+          text-align: center;
+          .bounce-arrow{
+            margin: 0;
+            font-size: 20px;
+            color: #000;
+            -moz-animation: bounce 2s infinite;
+            -webkit-animation: bounce 2s infinite;
+            animation: bounce 2s infinite;
+          }
+          .scroll-notify{
+            font-size: 12px;
+            color: #000;
+            margin: 0;
+          }
+          @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+              transform: translateY(0);
+            }
+            40% {
+              transform: translateY(-20px);
+            }
+            60% {
+              transform: translateY(-10px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

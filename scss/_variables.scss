@@ -1,0 +1,104 @@
+/*
+*colors
+ */
+$font-color: #333;
+$main-color: #2270b8;
+$scd-color: #ed1c24;
+$text-grey: #bababa;
+$grey-light: #f9f9f9;
+$dark-grey: #333;
+$border-color: #bababa;
+
+/*
+*font-sizes
+ */
+$main-fontSize: 16px;
+$scd-fontSize:18px;
+$nav-fontSize: 20px;
+$heading-fontSize: 30px;
+$title-fontSize:20px;
+
+$secPadding: 50px 0;
+
+/*
+*font-sizes
+*for 1366 res width
+ */
+$main-fontSize-13: 14px;
+$scd-fontSize-13:16px;
+$nav-fontSize-13: 18px;
+$heading-fontSize-13: 26px;
+$title-fontSize-13:18px;
+
+$secPadding-13: 40px 0;
+
+$secPadding-12: 30px 0;
+
+
+/*
+*font-sizes
+*for 576 res width
+ */
+$main-fontSize-5: 12px;
+$scd-fontSize-5:14px;
+$nav-fontSize-5: 16px;
+$heading-fontSize-5: 24px;
+$title-fontSize-5:16px;
+
+
+
+//----- translate -----
+$isRtl:ltr;
+$left: left;
+$right: right;
+$direction:ltr;
+$minus: 1;
+$bodyFont: sans-Regular;
+$headingFont: sans-Bold;
+$titleFont: sans-SemiBold;
+$langFont:DroidKufi;
+
+$double-right: "\f101";
+$double-left: "\f100";
+$chevron-left:"\f053";
+$chevron-right:"\f054";
+$align-right:'\f038';
+
+
+$flex-direction:row;
+
+
+@if $isRtl == rtl
+{
+  $left: right;
+  $right: left;
+  $direction:rtl;
+  $minus: -1;
+  $bodyFont: sans-Regular;
+  $headingFont: DroidKufi;
+  $titleFont: DroidKufi;
+  $langFont:RobotoSlab;
+  $navSize:18px;
+  $double-right: "\f100";
+  $double-left: "\f101";
+  $chevron-left:"\f054";
+  $chevron-right:"\f053";
+  $align-right:'\f036';
+  $flex-direction:row-reverse;
+}
+@else {
+  $left: left;
+  $right: right;
+  $direction:ltr;
+  $minus: 1;
+  $bodyFont: sans-Regular;
+  $headingFont: sans-Bold;
+  $headingFontLight: sans-SemiBold;
+  $langFont:DroidKufi;
+  $double-right: "\f101";
+  $double-left: "\f100";
+  $chevron-left:"\f053";
+  $chevron-right:"\f054";
+  $align-right:'\f038';
+  $flex-direction:row;
+}

@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <link rel="stylesheet" href="css/tagsinput.css">
+    <link rel="stylesheet" href="css/jalendar.css">
+    <link rel="stylesheet" href="css/style-en.css">
+    <title>Doctorak</title>
+</head>
+<body>
+
+<!--HEADER AFTER LOGIN-->
+<header>
+    <div class="header header-logged">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="logo">
+                    <a class="navbar-brand" href="01-index.html">
+                        <img src="images/logo.png" alt="doctorak logo">
+                    </a>
+                </div>
+                <div class="the-lists">
+                    <div class="collapse navbar-collapse" id="overlay">
+                        <div class="overlay-menu">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link active" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">about</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">doctors</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">appointment</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">faq</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contact-lists">
+                        <ul class="connection">
+                            <li><a href="tel:"><i class="fas fa-phone"></i> <span>+20100356156</span></a></li>
+                            <li><a href="mailto:"><i class="fas fa-envelope"></i> <span>e-mail@info.com</span></a></li>
+                        </ul>
+                        <ul class="register-side">
+                            <li>
+                                <div class="dropdown notify">
+                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                       id="dropdownMenuLink01" data-toggle="dropdown" aria-haspopup="true"
+                                       aria-expanded="false">
+                                        <div class="my-profile">
+                                            <img src="images/a-doctor.jpg" alt="profile picture">
+                                        </div>
+                                        <span>profile</span>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink01">
+                                        <a class="dropdown-item" href="#">
+                                            <span>account</span>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <span>review</span>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <span>edit profile</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown notify">
+                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                       id="dropdownMenuLink02" data-toggle="dropdown" aria-haspopup="true"
+                                       aria-expanded="false">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>message</span>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink02">
+                                        <a class="dropdown-item" href="#">
+                                            <span><span class="img-span"><img src="images/a-doctor-03.jpg" alt=""></span></span>
+                                            <span class="name-span">ahmed</span>
+                                            <p class="the-message">sent you a message</p>
+                                            <p class="timer">1 day ago</p>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <span><span class="img-span"><img src="images/a-doctor.jpg" alt=""></span></span>
+                                            <span class="name-span">ahmed</span>
+                                            <p class="the-message">sent you a message</p>
+                                            <p class="timer">1 day ago</p>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <span><span class="img-span"><img src="images/a-doctor-02.jpg" alt=""></span></span>
+                                            <span class="name-span">ahmed</span>
+                                            <p class="the-message">sent you a message</p>
+                                            <p class="timer">1 day ago</p>
+                                        </a>
+                                        <a class="dropdown-item view-all" href="#">view all</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown notify">
+                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                       id="dropdownMenuLink03" data-toggle="dropdown" aria-haspopup="true"
+                                       aria-expanded="false">
+                                        <i class="fas fa-bell"></i>
+                                        <span>notification</span>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink03">
+                                        <a class="dropdown-item" href="#">
+                                            <span><span class="img-span"><img src="images/a-doctor-03.jpg" alt=""></span></span>
+                                            <span class="name-span">ahmed</span>
+                                            <p class="the-message">sent you a request</p>
+                                            <p class="timer">1 day ago</p>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <span><span class="img-span"><img src="images/a-doctor.jpg" alt=""></span></span>
+                                            <span class="name-span">ahmed</span>
+                                            <p class="the-message">sent you a request</p>
+                                            <p class="timer">1 day ago</p>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <span><span class="img-span"><img src="images/a-doctor-02.jpg" alt=""></span></span>
+                                            <span class="name-span">ahmed</span>
+                                            <p class="the-message">sent you a request</p>
+                                            <p class="timer">1 day ago</p>
+                                        </a>
+                                        <a class="dropdown-item view-all" href="#">view all</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="navbar-toggler" id="toggle" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <!--<span class="burger-icon"></span>-->
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </button>
+            </nav>
+        </div>
+    </div>
+</header><!--END-HEADER AFTER LOGIN-->
+
+<main>
+
+    <!--internals-opening-->
+    <section class="index-opening internals-header" style="background-image: url('images/slide2.jpg')">
+        <div class="container">
+            <div class="float-find">
+                <div class="find-adoctor">
+                    <form action="">
+                        <div class="form-group clearfix">
+                            <div class="float-heading">
+                                <h1 class="section-heading">
+                                    Finding a Doctor in Egypt Has Never Been Easier
+                                </h1>
+                            </div>
+                            <div class="float-form">
+                                <div class="sel">
+                                    <select class="custom-select">
+                                        <option selected>Choose specialty</option>
+                                        <option value="1">Sup01</option>
+                                        <option value="2">Sup02</option>
+                                        <option value="3">Sup03</option>
+                                        <option value="4">Sup04</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="float-form">
+                                <div class="sel">
+                                    <select class="custom-select">
+                                        <option selected>Choose city</option>
+                                        <option value="1">Sup05</option>
+                                        <option value="2">Sup05</option>
+                                        <option value="3">Sup05</option>
+                                        <option value="4">Sup05</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="float-form">
+                                <div class="sel">
+                                    <select class="custom-select">
+                                        <option selected>Choose area</option>
+                                        <option value="1">Sup0156</option>
+                                        <option value="2">Sup0256</option>
+                                        <option value="3">Sup0356</option>
+                                        <option value="4">Sup0456</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="float-form">
+                                <input type="text" class="form-control" placeholder="Type the doctor name">
+                            </div>
+                            <div class="float-btn">
+                                <button type="submit" class="btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="breadcrumb-wrap">
+                <h1 class="section-heading">
+                    dr/ profile
+                </h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <div class="motion-under">
+                                <a href="#">Home</a>
+                            </div>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">dr/ profile</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section><!--END-doctors-->
+
+    <section class="doctor-profile">
+        <div class="container">
+            <div class="personal-info">
+                <div class="doc-booking">
+                    <div class="doc-rating">
+                        <div class="doc-img">
+                            <img src="images/a-doctor-03.jpg" alt="doctor picture">
+                        </div>
+                        <div class="view-rating">
+                            <div class="star-rating">
+                                <span class="far fa-star" data-rating="1"></span>
+                                <span class="far fa-star" data-rating="2"></span>
+                                <span class="far fa-star" data-rating="3"></span>
+                                <span class="far fa-star" data-rating="4"></span>
+                                <span class="far fa-star" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="0">
+                            </div>
+                            <span class="rate-value">5.0</span>
+                        </div>
+                        <button type="submit" class="btn blue-bg">
+                            edit profile
+                        </button>
+                    </div>
+                    <div class="doc-info">
+                        <div class="doc-info-head">
+                            <div class="specialty-in">
+                                <h3 class="section-heading red">Dr. Essam Gaber Ali</h3>
+                                <h4>Psychiatry MD</h4>
+                            </div>
+                            <div class="specialty-out">
+                                <p>Country of Residence: <span>Egypt</span></p>
+                                <p>language: <span>english</span> <span> ,arabic</span></p>
+                            </div>
+                        </div>
+                        <div class="about-doc">
+                            <div class="about-me-block">
+                                <p class="what-i-do more-read">
+                                    Mental Retardation , Learning Disorders , Communication Disorders , Autistic Spectrum Disorders , Attention-Deficit Hyperactivity Disorder , Disruptive Behavior Disorders , Tic Disorders , Elimination Disorders , Reactive Attachment Disorders , Mood Disorders , Anxiety Disorders , Obsessive-Compulsive Disorder , Posttraumatic Stress Disorder
+                                    Mental Retardation , Learning Disorders , Communication Disorders , Autistic Spectrum Disorders , Attention-Deficit Hyperactivity Disorder , Disruptive Behavior Disorders , Tic Disorders , Elimination Disorders , Reactive Attachment Disorders , Mood Disorders , Anxiety Disorders , Obsessive-Compulsive Disorder , Posttraumatic Stress Disorder
+                                    <a href="#" class="more-read-btn" type="btn">more.</a>
+                                    <a href="#" class="less-read-btn" type="btn">less.</a>
+                                </p>
+                            </div>
+                            <div class="about-me-block">
+                                <p class="about-me-heading">
+                                    About <span>Dr. Essam Gaber Ali</span>
+                                </p>
+                                <ul>
+                                    <li>
+                                        <p>-A consultant with an MD Degree in Psychiatry.</p>
+                                    </li>
+                                    <li>
+                                        <p>-Worked for five years in Ismailia Military Hospital.</p>
+                                    </li>
+                                    <li>
+                                        <p>-Child Psychiatry Training</p>
+                                    </li>
+                                    <li>
+                                        <p>-Clinical Management of  Victims/Survivors of Gender-Based Violence Training</p>
+                                    </li>
+                                    <li>
+                                        <p>-A consultant with an MD Degree in Psychiatry.</p>
+                                    </li>
+                                    <li>
+                                        <p>-Worked for five years in Ismailia Military Hospital.</p>
+                                    </li>
+                                    <li>
+                                        <p>-Child Psychiatry Training</p>
+                                    </li>
+                                    <li>
+                                        <p>-Clinical Management of  Victims/Survivors of Gender-Based Violence Training</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="about-me-block">
+                                <p class="about-me-heading">
+                                    Certificates
+                                </p>
+                                <p>Psychiatry MD - Suez Canal University</p>
+                                <p>Master Degree in Neuro-Psychiatry - Suez Canal University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="doctor-profile">
+        <div class="container">
+            <div class="reviews">
+                <h2 class="section-heading red">reviews</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="single-review">
+                            <div class="account-pic">
+                                <img src="images/a-doctor-03.jpg" alt="">
+                            </div>
+                            <div class="review-bio">
+                                <h3>muhammad hassan</h3>
+                                <p><span>saturday,</span><span> 20 October 2018 </span><span> 4:35 pm</span></p>
+                                <div class="star-rating">
+                                    <span class="far fa-star" data-rating="1"></span>
+                                    <span class="far fa-star" data-rating="2"></span>
+                                    <span class="far fa-star" data-rating="3"></span>
+                                    <span class="far fa-star" data-rating="4"></span>
+                                    <span class="far fa-star" data-rating="5"></span>
+                                    <input type="hidden" name="whatever1" class="rating-value" value="0">
+                                </div>
+                                <article>
+                                    I dont know he kinds kept shouting to me , n i told me to take medication without telling me whats going to help me with n for how long .. i am not satisfied about this therapy cuz it wasnt really one .
+                                </article>
+                                <a href="#">report.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-review">
+                            <div class="account-pic">
+                                <img src="images/a-doctor-03.jpg" alt="">
+                            </div>
+                            <div class="review-bio">
+                                <h3>muhammad hassan</h3>
+                                <p><span>saturday,</span><span> 20 October 2018 </span><span> 4:35 pm</span></p>
+                                <div class="star-rating">
+                                    <span class="far fa-star" data-rating="1"></span>
+                                    <span class="far fa-star" data-rating="2"></span>
+                                    <span class="far fa-star" data-rating="3"></span>
+                                    <span class="far fa-star" data-rating="4"></span>
+                                    <span class="far fa-star" data-rating="5"></span>
+                                    <input type="hidden" name="whatever1" class="rating-value" value="0">
+                                </div>
+                                <article>
+                                    I dont know he kinds kept shouting to me , n i told me to take medication without telling me whats going to help me with n for how long .. i am not satisfied about this therapy cuz it wasnt really one .
+                                </article>
+                                <a href="#">report.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-review">
+                            <div class="account-pic">
+                                <img src="images/a-doctor-03.jpg" alt="">
+                            </div>
+                            <div class="review-bio">
+                                <h3>muhammad hassan</h3>
+                                <p><span>saturday,</span><span> 20 October 2018 </span><span> 4:35 pm</span></p>
+                                <div class="star-rating">
+                                    <span class="far fa-star" data-rating="1"></span>
+                                    <span class="far fa-star" data-rating="2"></span>
+                                    <span class="far fa-star" data-rating="3"></span>
+                                    <span class="far fa-star" data-rating="4"></span>
+                                    <span class="far fa-star" data-rating="5"></span>
+                                    <input type="hidden" name="whatever1" class="rating-value" value="0">
+                                </div>
+                                <article>
+                                    I dont know he kinds kept shouting to me , n i told me to take medication without telling me whats going to help me with n for how long .. i am not satisfied about this therapy cuz it wasnt really one .
+                                </article>
+                                <a href="#">report.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-review">
+                            <div class="account-pic">
+                                <img src="images/a-doctor-03.jpg" alt="">
+                            </div>
+                            <div class="review-bio">
+                                <h3>muhammad hassan</h3>
+                                <p><span>saturday,</span><span> 20 October 2018 </span><span> 4:35 pm</span></p>
+                                <div class="star-rating">
+                                    <span class="far fa-star" data-rating="1"></span>
+                                    <span class="far fa-star" data-rating="2"></span>
+                                    <span class="far fa-star" data-rating="3"></span>
+                                    <span class="far fa-star" data-rating="4"></span>
+                                    <span class="far fa-star" data-rating="5"></span>
+                                    <input type="hidden" name="whatever1" class="rating-value" value="0">
+                                </div>
+                                <article>
+                                    I dont know he kinds kept shouting to me , n i told me to take medication without telling me whats going to help me with n for how long .. i am not satisfied about this therapy cuz it wasnt really one .
+                                </article>
+                                <a href="#">report.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-review">
+                            <div class="account-pic">
+                                <img src="images/a-doctor-03.jpg" alt="">
+                            </div>
+                            <div class="review-bio">
+                                <h3>muhammad hassan</h3>
+                                <p><span>saturday,</span><span> 20 October 2018 </span><span> 4:35 pm</span></p>
+                                <div class="star-rating">
+                                    <span class="far fa-star" data-rating="1"></span>
+                                    <span class="far fa-star" data-rating="2"></span>
+                                    <span class="far fa-star" data-rating="3"></span>
+                                    <span class="far fa-star" data-rating="4"></span>
+                                    <span class="far fa-star" data-rating="5"></span>
+                                    <input type="hidden" name="whatever1" class="rating-value" value="0">
+                                </div>
+                                <article>
+                                    I dont know he kinds kept shouting to me , n i told me to take medication without telling me whats going to help me with n for how long .. i am not satisfied about this therapy cuz it wasnt really one .
+                                </article>
+                                <a href="#">report.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-review">
+                            <div class="account-pic">
+                                <img src="images/a-doctor-03.jpg" alt="">
+                            </div>
+                            <div class="review-bio">
+                                <h3>muhammad hassan</h3>
+                                <p><span>saturday,</span><span> 20 October 2018 </span><span> 4:35 pm</span></p>
+                                <div class="star-rating">
+                                    <span class="far fa-star" data-rating="1"></span>
+                                    <span class="far fa-star" data-rating="2"></span>
+                                    <span class="far fa-star" data-rating="3"></span>
+                                    <span class="far fa-star" data-rating="4"></span>
+                                    <span class="far fa-star" data-rating="5"></span>
+                                    <input type="hidden" name="whatever1" class="rating-value" value="0">
+                                </div>
+                                <article>
+                                    I dont know he kinds kept shouting to me , n i told me to take medication without telling me whats going to help me with n for how long .. i am not satisfied about this therapy cuz it wasnt really one .
+                                </article>
+                                <a href="#">report.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="read-more motion-under">
+                            <a href="#">read more </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="doctor-profile">
+        <div class="container">
+            <div class="available-time">
+                <h2 class="section-heading red">available time</h2>
+                <form action="">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="sel">
+                                <select class="custom-select">
+                                    <option selected>country</option>
+                                    <option value="1">Sup01</option>
+                                    <option value="2">Sup02</option>
+                                    <option value="3">Sup03</option>
+                                    <option value="4">Sup04</option>
+                                </select>
+                                <div class="sel02">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <button type="submit" class="btn">
+                                ADD
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">date</th>
+                            <th scope="col">time from</th>
+                            <th scope="col">time to</th>
+                            <th scope="col">price</th>
+                            <th scope="col" colspan="2">action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Thursday, Auguest 12, 2018</td>
+                            <td>12:30 PM</td>
+                            <td>01:30 PM</td>
+                            <td>60 Min. ( 300 LE )</td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="accept-btn">edit</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="delete-btn">cancel</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Thursday, Auguest 12, 2018</td>
+                            <td>12:30 PM</td>
+                            <td>01:30 PM</td>
+                            <td>60 Min. ( 300 LE )</td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="accept-btn">edit</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="delete-btn">cancel</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Thursday, Auguest 12, 2018</td>
+                            <td>12:30 PM</td>
+                            <td>01:30 PM</td>
+                            <td>60 Min. ( 300 LE )</td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="accept-btn">edit</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="delete-btn">cancel</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Thursday, Auguest 12, 2018</td>
+                            <td>12:30 PM</td>
+                            <td>01:30 PM</td>
+                            <td>60 Min. ( 300 LE )</td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="accept-btn">edit</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="delete-btn">cancel</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Thursday, Auguest 12, 2018</td>
+                            <td>12:30 PM</td>
+                            <td>01:30 PM</td>
+                            <td>60 Min. ( 300 LE )</td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="accept-btn">edit</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="delete-btn">cancel</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Thursday, Auguest 12, 2018</td>
+                            <td>12:30 PM</td>
+                            <td>01:30 PM</td>
+                            <td>60 Min. ( 300 LE )</td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="accept-btn">edit</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="delete-btn">cancel</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Thursday, Auguest 12, 2018</td>
+                            <td>12:30 PM</td>
+                            <td>01:30 PM</td>
+                            <td>60 Min. ( 300 LE )</td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="accept-btn">edit</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="delete-btn">cancel</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Thursday, Auguest 12, 2018</td>
+                            <td>12:30 PM</td>
+                            <td>01:30 PM</td>
+                            <td>60 Min. ( 300 LE )</td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="accept-btn">edit</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="motion-under">
+                                    <a href="#" class="delete-btn">cancel</a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!--FOOTER-->
+<footer>
+    <div class="upper-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="contact-info">
+                        <h1>contact information</h1>
+                        <div class="single-contact">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>11th Floor, Nile Badrawi building, Corniche El Nile, Maadi, Cairo, egypt.</p>
+                        </div>
+                        <div class="single-contact">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@doctorak.com.com</p>
+                        </div>
+                        <div class="single-contact">
+                            <i class="fas fa-phone"></i>
+                            <p>0100 235 3695</p>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <h1>follow us</h1>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="recent-news">
+                        <h1>recent-news</h1>
+                        <div class="single-news">
+                            <div class="single-news-img">
+                                <img src="images/a-doctor-02.jpg" alt="">
+                            </div>
+                            <div class="single-news-info">
+                                <p class="single-news-head">Stress buster tips</p>
+                                <p><span>Dec 2.0, 2014</span></p>
+                            </div>
+                        </div>
+                        <div class="single-news">
+                            <div class="single-news-img">
+                                <img src="images/a-doctor-02.jpg" alt="">
+                            </div>
+                            <div class="single-news-info">
+                                <p class="single-news-head">Stress buster tips</p>
+                                <p><span>Dec 2.0, 2014</span></p>
+                            </div>
+                        </div>
+                        <div class="single-news">
+                            <div class="single-news-img">
+                                <img src="images/a-doctor-02.jpg" alt="">
+                            </div>
+                            <div class="single-news-info">
+                                <p class="single-news-head">Stress buster tips</p>
+                                <p><span>Dec 2.0, 2014</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="map">
+                        <h1>map</h1>
+                        <div class="the-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.7181024348165!2d30.9175956!3d29.9587861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458560d391e206f%3A0xa94059b45f0074a8!2sDiva+-+Systems+%26+Advertising!5e0!3m2!1sen!2seg!4v1542557136334" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lower-footer">
+        <p>Copyright © 2018 Doctorak. All rights reserved,<span class="motion-under">powered by <a href="http://www.diva-lab.com/">diva-lab</a></span></p>
+        <div class="social social-responsive">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer><!--END-FOOTER-->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+        integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+        crossorigin="anonymous"></script>
+<script src="js/tagsinput.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="js/intlTelInput.min.js"></script>
+<script src="js/jalendar.min.js"></script>
+<script>
+
+</script>
+
+<script>
+    $("#phone").intlTelInput({
+        formatOnDisplay: true,
+        separateDialCode: true,
+        utilsScript: "build/js/utils.js",
+        initialCountry: "auto",
+        geoIpLookup: function (callback) {
+            $.get('https://ipinfo.io', function () {
+            }, "jsonp").always(function (resp) {
+                var countryCode = (resp && resp.country) ? resp.country : "";
+                callback(countryCode);
+            });
+        },
+    });
+</script>
+
+<script src="js/doc-script.js"></script>
+</body>
+</html>

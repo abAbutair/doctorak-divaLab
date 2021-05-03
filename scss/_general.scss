@@ -1,0 +1,843 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+body{
+  font-family: $bodyFont;
+  direction: $isRtl;
+  color: $font-color;
+}
+
+section{
+  padding: $secPadding;
+}
+
+.jalendar-input {
+  width: 100% !important;
+}
+input.form-control, .jalendar-input input{
+  border: 1px solid $border-color;
+  height: 47px;
+  background-color: transparent;
+  @include border-radius(0);
+  margin-bottom: 20px;
+  &:focus{
+    border-color: transparent;
+    box-shadow: 0 0 8px 0 rgba(34, 112, 184, 0.9);
+    color: #495057!important;
+  }
+}
+input.form-control{
+  color: $text-grey;
+  &::placeholder{
+    color: $text-grey;
+    font-size: $main-fontSize;
+    text-transform: capitalize;
+    user-select: none;
+  }
+}
+.form-control:disabled, .form-control[readonly]{
+  background-color: transparent;
+}
+//--------
+.sort-by{
+  width: 180px;
+  .select2-container{
+    width: 100%;
+  }
+}
+//-------- sel
+.sel{
+  margin-bottom: 20px;
+  .select2-container--default .select2-selection--single{
+    border: 1px solid $border-color;
+    height: 47px;
+    background-color: transparent;
+    @include border-radius(0);
+    display: flex;
+    align-items: center;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: $text-grey;
+    font-size: $main-fontSize;
+    text-transform: capitalize;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 47px;
+    top: 0;
+    #{$right}: 7px;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow b{
+    border: 0;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    &:after{
+      content: '\f107';
+      font-family: "Font Awesome\ 5 Free";
+      font-weight: 900;
+      font-size: $main-fontSize;
+      color: $text-grey;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+    &:after{
+      content: '\f106';
+    }
+  }
+}
+.select2-container--default .select2-results__option[aria-selected=true]{
+  background-color: $grey-light!important;
+}
+.select2-dropdown{
+  border-radius: 0;
+  border: 1px solid #fff;
+  border-top: 0!important;
+  box-shadow: 0 20px 71px -30px rgba(34, 112, 184, 0.9);
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+  background-color: transparent;
+  color: $scd-color;
+}
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple{
+  background: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 0 71px -11px rgba(34, 112, 184, 0.9);
+  .select2-selection__rendered{
+    color: $text-grey!important;
+  }
+  .select2-selection__arrow b:after{
+    color: $text-grey!important;
+  }
+}
+//------------
+
+textarea.form-control{
+  border: 1px solid $border-color;
+  border-radius: 0;
+  resize: none;
+  background: transparent;
+  margin-bottom: 20px;
+  &::placeholder{
+    color: $text-grey;
+    font-size: $main-fontSize;
+  }
+  &:focus{
+    border-color: transparent;
+    box-shadow: 0 0 8px 0 rgba(34, 112, 184, 0.9);
+    color: #495057!important;
+  }
+}
+button.btn{
+  height: 47px;
+  min-width: 147px;
+  color: #fff;
+  background-color: $scd-color;
+  @include border-radius(0);
+  text-transform: uppercase;
+  font-size: $main-fontSize;
+}
+button{
+  &:focus{
+    outline: none!important;
+  }
+}
+button.blue-bg{
+  background: $main-color;
+}
+.section-heading{
+  color: $main-color;
+  font-size: $heading-fontSize;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-family: $headingFont;
+}
+.red{
+  color: $scd-color;
+}
+
+.section-para{
+  color: $text-grey;
+  width: 60%;
+  margin: 0 auto;
+}
+p, article{
+  font-size: $main-fontSize;
+}
+
+.special-section{
+  background: radial-gradient($main-color, #0e517e);
+  .section-heading{
+    color: #fff;
+  }
+  input.form-control, .jalendar-input input{
+    border: 1px solid #fff;
+    color: #fff;
+    &::placeholder{
+      color: #fff;
+    }
+  }
+  input.form-control:focus, .jalendar-input input:focus{
+    &::placeholder{
+      color: $text-grey;
+    }
+  }
+  .sel .select2-container--default .select2-selection--single{
+    border: 1px solid #fff;
+  }
+  .sel .select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #fff;
+  }
+  .sel .select2-container--default .select2-selection--single .select2-selection__arrow b:after{
+    color: #fff;
+  }
+  
+}
+.title{
+  color: $scd-color;
+  font-size: $title-fontSize;
+}
+a{
+  text-decoration: none;
+  &:hover{text-decoration: none;}
+}
+
+.read-more{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  a{
+    text-transform: capitalize;
+    font-size: 14px;
+    color: $main-color;
+    &:after{
+      content: $double-right;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 600;
+      display: inline-block;
+      color: inherit;
+      font-size: 12px;
+      margin-#{$left}: 5px;
+    }
+  }
+}
+
+.social{
+  ul{
+    display: flex;
+    li{
+      list-style-type: none;
+      margin-#{$right}: 7px;
+      &:last-child{
+        margin: 0;
+      }
+      a{
+        display: block;
+        i{
+          font-size: 45px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.social-responsive{
+  display: none;
+}
+
+//-----------checkbox----
+.check-square .form-check input:checked + label{
+  color: #333;
+}
+.check-square{
+  .form-check{
+    display: flex;
+    padding-#{$left}: 2rem;
+    input{
+      display: none;
+      + label{
+        color: $text-grey;
+        user-select: none;
+        font-size: $main-fontSize;
+        &:before {
+          content: ' ';
+          position: absolute;
+          #{$left}: 0;
+          width: 17px;
+          height: 17px;
+          border: 1px solid $border-color;
+          display: block;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      &:checked{
+        + label:before{
+          content: '\f00c';
+          font-family: "Font Awesome 5 Free";
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 22px;
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+//-----------link-underline----
+.motion-under{
+  margin-bottom: 10px;
+  a{
+    position: relative;
+    display: inline-block!important;
+    &:before{
+      content: ' ';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      @include transition(1s);
+    }
+    &:hover{
+      &:before{
+        width: 100%;
+      }
+    }
+  }
+}
+//-----------range-style-----------
+.ui-slider{
+  height: 3px;
+  border: none!important;
+  border-radius: 0;
+  margin: 20px 0 10px;
+  background: #000;
+  .ui-slider-range{
+    background: $scd-color;
+  }
+  .ui-state-default{
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    border: 0;
+    height: 17px;
+    width: 17px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 20px -2px;
+    top: -.4em;
+  }
+}
+.filtration-block{
+  .price-range{
+    display: flex;
+    justify-content: space-between;
+    #amount{
+      background: transparent;
+      border: 0;
+    }
+  }
+}
+
+//-----------star-rating----
+.star-rating {
+  line-height:32px;
+}
+
+.star-rating .fa-star{
+  color: $main-color;
+  font-size: $main-fontSize;
+}
+//-----------------------------------------------------
+/* custom radio style */
+//------------------------
+.radio-wrap{
+  margin-bottom: 20px;
+}
+.custom-radio{
+  padding-#{$left}: 1.5rem;
+  padding-#{$right}: 0;
+  margin-#{$right}: 1rem;
+  margin-#{$left}: 0;
+  input{
+    display: none;
+  }
+  label{
+    position: relative;
+    cursor: pointer;
+    &:before{
+      border: 1px solid $border-color;
+      background: transparent;
+      cursor: pointer;
+      #{$left}: -25px;
+      pointer-events: auto;
+      width: 18px;
+      height: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::before{
+  background-color: transparent!important;
+  box-shadow: none;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::after{
+  background-image: none;
+  background-color: $main-color;
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  #{$left}: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//--------------------------internals-general-------------
+.index-opening.internals-header{
+  padding: 0;
+  background-position-y: 30%;
+  z-index: 1;
+}
+.index-opening.internals-header .float-find{
+  padding-#{$left}: 0!important;
+  padding: 0;
+  .find-adoctor{
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    padding: 40px 0 20px;
+    .form-group{
+      margin: 0;
+    }
+  }
+}
+.internals-header{
+  position: relative;
+  &:after{
+    content: ' ';
+    background: rgba(0,0,0,0.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .float-find{
+    .find-adoctor{
+      form{
+        .float-form{
+          float: $left;
+          width: calc(25% - 30px - 11.75px);
+          margin-#{$right}: 30px;
+        }
+        .float-heading{
+          float: $left;
+          width: 100%;
+        }
+        .float-btn{
+          float: $left;
+          width: auto;
+          .btn{
+            min-width: 47px;
+          }
+        }
+      }
+    }
+  }
+  .breadcrumb-wrap{
+    display: flex;
+    padding: 40px 0;
+    align-items: center;
+    .section-heading{
+      color: $scd-color;
+      margin: 0;
+      margin-#{$right}: 35px;
+      text-transform: capitalize;
+    }
+    .breadcrumb{
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      .breadcrumb-item{
+        color: $font-color;
+        font-size: $main-fontSize;
+        text-transform: capitalize;
+        .motion-under{
+          margin-bottom: 0;
+        }
+        a{
+          color: $font-color;
+        }
+      }
+    }
+  }
+  .breadcrumb-item+.breadcrumb-item::before{
+    content: $double-right;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    color: $font-color;
+    font-size: $main-fontSize;
+  }
+
+  input.form-control{
+    border: 1px solid #fff;
+    &::placeholder{
+      color: #fff;
+    }
+  }
+  input.form-control{
+    color: #fff;
+  }
+  .sel{
+    .select2-container--default .select2-selection--single{
+      border: 1px solid #fff;
+    }
+  }
+  .sel .select2-container--default .select2-selection--single .select2-selection__rendered,.sel .select2-container--default .select2-selection--single .select2-selection__arrow b:after{
+    color: #fff;
+  }
+  .select2-dropdown{
+    border: 1px solid #fff;
+    border-top: 0;
+  }
+  input.form-control:focus, .jalendar-input input:focus{
+    &::placeholder{
+      color: $text-grey;
+    }
+  }
+}
+//------------------------------------------------
+.a-doctor {
+  margin: 0 15px;
+  background: #fff;
+  border: 1px solid #fff;
+  .a-doctor-img {
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    img {
+      width: 130%;
+      height: auto;
+    }
+  }
+  .a-doctor-bio {
+    display: flex;
+    padding: 20px 30px;
+    .doctor-info {
+      width: 50%;
+      text-align: $left;
+      .title {
+        font-family: $headingFont;
+      }
+      .specialty {
+        font-size: $scd-fontSize;
+      }
+    }
+    .rate-price {
+      width: 50%;
+      text-align: $right;
+      p {
+        font-size: $scd-fontSize;
+        color: $main-color;
+      }
+    }
+    .star-rating, p {
+      margin-bottom: 10px;
+      flex: 100%;
+    }
+  }
+  button.btn {
+    margin-bottom: 40px;
+  }
+}
+
+//----- faq columns
+.columns{
+  float: $left;
+  position: relative;
+  margin-#{$right}: 30px;
+  width: calc(50% - 15px);
+  &:last-child{
+    margin: 0;
+  }
+  li{
+    list-style-type: none;
+  }
+}
+
+//-----
+.dividers{
+  height: 1px;
+  width: 80%;
+  background: #333;
+}
+//-----
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 .selected-flag {
+  background: #f2f2f2;
+  width: 85px;
+}
+//-----
+#phone{
+  border: 1px solid #bababa;
+  height: 47px;
+  background-color: transparent;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  &:focus{
+    border-color: transparent;
+    box-shadow: 0 0 8px 0 rgba(34, 112, 184, 0.9);
+    color: #495057 !important;
+  }
+}
+//-----
+.active-payment{
+  opacity: 1!important;
+  .check-square .form-check input + label{
+    cursor: pointer;
+  }
+}
+//----- flag phone code payment
+//.intl-tel-input .selected-flag .iti-arrow{
+//  right: 12px;
+//}
+.intl-tel-input {
+  width: 90%;
+}
+.iti-flag {background-image: url("../images/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti-flag {background-image: url("../images/flags@2x.png");}
+}
+
+//------------------------
+.filupp > input[type="file"] {
+  display: none;
+}
+
+.filupp {
+  margin: 0;
+  cursor: pointer;
+  .account-pic{
+    display: flex;
+    width: 260px;
+    height: 200px;
+    overflow: hidden;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #f9f9f9;
+    margin-bottom: 20px;
+    img{
+      width: 100%;
+    }
+  }
+  .filupp-file-name{
+    .js-value{
+      display: block;
+      text-align: center;
+      text-transform: capitalize;
+      color: $main-color;
+      font-family: $headingFont;
+    }
+  }
+}
+
+//--------------------
+.jalendar-input .jalendar{
+  top: 38px;
+}
+//--------------------
+.custom-jalendar{
+  width: 100%;
+  margin: 0;
+}
+.custom-jalendar .jalendar-container .jalendar-pages .days .day{
+  height: 50px;
+}
+.custom-jalendar .jalendar-container .jalendar-pages{
+  background: #f9f9f9!important;
+  padding: 0;
+}
+.custom-jalendar .jalendar-container .jalendar-pages>.header .nxt-m, .custom-jalendar .jalendar-container .jalendar-pages>.header .prv-m{
+  background-color: #ed1c24;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 15px;
+}
+.custom-jalendar .jalendar-container .jalendar-pages>.header .prv-m{
+  #{$left}: 15px;
+}
+.custom-jalendar .jalendar-container .jalendar-pages>.header .nxt-m{
+  #{$right}: 15px;
+}
+.custom-jalendar .jalendar-container .jalendar-pages>.header .day-names{
+  background: #2270b8;
+  width: 100%;
+  color: #fff;
+}
+.custom-jalendar .jalendar-container .jalendar-pages>.header h1{
+  margin: 31.5px 0;
+  color: #333;
+}
+.custom-jalendar .jalendar-container .jalendar-pages>.header h2{
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+}
+.custom-jalendar .jalendar-container .jalendar-pages .days .day.today span{
+  background: $scd-color;
+  width: 100%;
+  border-radius:0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.custom-jalendar .jalendar-container .jalendar-pages .days .day.today.have-event span:before{
+  background: #fff;
+}
+.custom-jalendar .jalendar-container .jalendar-pages .days .day.have-event span:before{
+  background: $scd-color;
+  border-radius: 2px;
+  width: 6px;
+  height: 6px;
+  top: 2px;
+  #{$right}: 2px;
+}
+.custom-jalendar .jalendar-container .jalendar-pages .days .day.this-month.selected span{
+  background: $main-color;
+  width: 100%;
+  border-radius:0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.custom-jalendar .jalendar-container .jalendar-pages .days .day.this-month span:hover{
+  background: lighten($main-color, 10%);
+  width: 100%;
+  border-radius:0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.custom-jalendar .jalendar-container .jalendar-pages .days .day span{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.custom-jalendar .jalendar-container .jalendar-pages .add-event.selected{
+  display: none;
+}
+
+//----- tags input
+.bootstrap-tagsinput{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  .badge{
+    margin-bottom: 20px;
+    background: $grey-light;
+    color: #333;
+    border: 1px solid $text-grey;
+    border-radius: 0;
+    padding: 10px;
+    font-size: 14px;
+  }
+  input{
+    order: -1;
+    width: calc(33.333333% - 15px);
+    margin-#{$right}: calc(100% - 33.333333%);
+    border: 1px solid #bababa;
+    height: 47px;
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    margin-bottom: 20px;
+    &:focus{
+      border-color: transparent;
+      box-shadow: 0 0 8px 0 rgba(34, 112, 184, 0.9);
+      color: #495057!important;
+    }
+    &::placeholder{
+      color: $text-grey;
+      font-size: $main-fontSize;
+      text-transform: capitalize;
+    }
+  }
+}
+.bootstrap-tagsinput .badge [data-role="remove"]:after{
+  font-size: 16px;
+  background: transparent;
+}
+.bootstrap-tagsinput .badge [data-role="remove"]:hover:after{
+  border-radius: 0;
+  background-color: $text-grey;
+}
+
+//----- more read article
+.more-read{
+  max-height: 95px;
+  overflow: hidden;
+  white-space: pre-line;
+  position: relative;
+  a{
+    position: absolute;
+    bottom: 2px;
+    #{$right}: 30px;
+    color: $main-color;
+    font-size: 18px;
+  }
+  .more-read-btn{
+    bottom: -2px;
+  }
+}
+.more-active{
+  max-height: unset;
+  background: $grey-light;
+  padding: 10px;
+}
+.less-read-btn{
+  display: none;
+}
+
+//-------pagination----------------
+.pagination-wrap{
+  .pagination{
+    margin: 0;
+  }
+}
